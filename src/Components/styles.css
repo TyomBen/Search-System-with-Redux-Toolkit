@@ -21,6 +21,12 @@
     height: 29px;
     color: white;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: #a29dff;
+    color: #645cff;
 }
 
 .spiner-container {

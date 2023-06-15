@@ -6,7 +6,7 @@ export const gettingData = createAsyncThunk (
     async (_, thunkAPI) => {
         const { initialStateValue, data } = thunkAPI.getState().carts;
         try {
-            if (!data.length) {
+            if (!data.length && initialStateValue.length < 4) {
                   const response = await axios (`${URL}=cat`);
                   return response.data.results;
               }

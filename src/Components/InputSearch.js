@@ -1,11 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
 import { gettingData } from '../features/actions/carts';
 const InputSeacrh = ({handleFolowValue}) => {
-    const { initialStateValue } = useSelector (({carts}) => carts); //kamel karainq chgreinq useSelector 
+    const { initialStateValue, data } = useSelector (({carts}) => carts); //kamel karainq chgreinq useSelector 
     const dispatch = useDispatch()                                //dra poxaren destrukciyaov karainq poxanceinq mer initialState@
     const handleClick = (event) => {                             
         event.preventDefault()
-        dispatch (gettingData ())
+        if (initialStateValue !== ''){
+            try {
+                dispatch (gettingData ())
+            }catch (eror) {
+                console.log(eror);
+            }
+        }
       }
     return (
       <form>

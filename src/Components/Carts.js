@@ -8,7 +8,7 @@ import { valueFolow } from '../features/slices/cartsSlices';
 import InputSeacrh from './InputSearch';
 const Carts = () => {
     const dispatch = useDispatch ()
-    const {data, isloading, erors} = useSelector (({carts}) => carts);
+    const { data, isloading } = useSelector (({carts}) => carts);
     useEffect (() => {
         try {
             dispatch (gettingData ())  
@@ -23,7 +23,7 @@ const handleFolowValue = (event) => {
     dispatch (valueFolow(event.target.value));
 }
 
-   return data ? (
+   return data.length ? (
     <>
         <InputSeacrh handleFolowValue = {handleFolowValue} />
         <section className='cats-container'>
