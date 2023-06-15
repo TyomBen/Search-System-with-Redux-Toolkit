@@ -1,0 +1,51 @@
+.title {
+    font-size: 80px;
+    color: #645cff;
+    font-weight: 400;
+    text-align: center;
+}
+  
+.search-input {
+    min-width: 527.75px;
+    height: 29px;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    margin-left: 660px;
+}
+  
+.btn {
+    min-width: 72.25px;
+    background-color: #645cff;
+    border: none;
+    height: 29px;
+    color: white;
+    cursor: pointer;
+}
+
+.spiner-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+}
+
+.images-style {
+    width: 352px;
+    height: 160px;
+    object-fit: cover;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.cats-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 41px;
+}
+
+h2 {
+    text-align: center;
+    color: wheat;
+    padding-top: 50px;
+}
